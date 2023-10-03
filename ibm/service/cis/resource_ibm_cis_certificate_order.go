@@ -62,7 +62,7 @@ func ResourceIBMCISCertificateOrder() *schema.Resource {
 					cisCertificateOrderType),
 			},
 			cisCertificateOrderHosts: {
-				Type:        schema.TypeList,
+				Type:        schema.TypeSet,
 				Description: "Hosts which certificate need to be ordered",
 				Required:    true,
 				Elem:        &schema.Schema{Type: schema.TypeString},
